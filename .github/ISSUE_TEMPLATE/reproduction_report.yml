@@ -1,0 +1,52 @@
+name: Reproduction report
+description: Report a mismatch between a number in the article and what this repository produces.
+title: "repro: "
+labels: ["reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when a documented command does not reproduce the value it should.
+  - type: input
+    id: table
+    attributes:
+      label: Paper table or figure id
+      description: For example tab:e3_baselines, tab:e5_cifar, fig e1.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command run
+      description: The exact command, including the config path and the seeds.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected value
+      description: The value printed in the article or in results/paper.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed value
+      description: What the run produced, per seed if available.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, CPU, `rustc --version`, commit hash, and whether the `lapack` feature was enabled.
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Run artifacts
+      description: Attach or link the run JSONs.
+    validations:
+      required: false

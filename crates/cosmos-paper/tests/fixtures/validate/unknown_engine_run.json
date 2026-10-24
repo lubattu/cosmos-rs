@@ -1,0 +1,127 @@
+{
+  "output_path": "e1/series_L1_d4_lr0.1_m0_n0_mar0.628319/run_r0_seed_1.json",
+  "config": {
+    "experiment_name": "e1",
+    "engine": "lattice",
+    "seed": 1,
+    "retraction_interval": 0,
+    "model_variant": "flat",
+    "total_epochs": 1,
+    "batch_size": 8,
+    "input_dim": 16,
+    "input_subspace_dim": 4,
+    "interior_subspace_dim": 4,
+    "num_interior_blocks": 1,
+    "num_classes": 2,
+    "cmr_k": 2,
+    "topology": "series",
+    "lr_gauge": 0.1,
+    "momentum": 0.0,
+    "momentum_max_norm": 0.0,
+    "exp_method": "qr",
+    "svd_driver": "gesvd",
+    "update_method": "grassmann",
+    "retraction_method": "qr",
+    "cmr_margin": 0.6283185307179586,
+    "loss": "geodesic_hinge",
+    "activation": "none",
+    "activation_placement": "none",
+    "subspace_action": "projection"
+  },
+  "result": {
+    "batch_size": 8,
+    "best_val_acc": 50.0,
+    "best_epoch": 1,
+    "final_val_acc": 50.0,
+    "final_train_acc": 50.0,
+    "train_val_gap": 0.0,
+    "training_time_minutes": 0.01,
+    "epochs_per_minute": 100.0,
+    "samples_per_second": 800.0
+  },
+  "runtime_profile": [
+    {
+      "train_epoch_total_sec": 0.5,
+      "eval_epoch_total_sec": 0.1,
+      "epoch_total_sec": 0.6,
+      "evolution_step_sec": 0.2,
+      "evolution_retraction_sec": 0.0,
+      "retraction_steps": 0
+    }
+  ],
+  "history": {
+    "epoch": [
+      1
+    ],
+    "time_epoch_s": [
+      0.6
+    ],
+    "train_acc": [
+      50.0
+    ],
+    "val_acc": [
+      50.0
+    ],
+    "loss": [
+      0.5
+    ],
+    "mean_commutator": [
+      0.01
+    ],
+    "per_block": {
+      "connection_norms_mean": [
+        0.1
+      ],
+      "commutator_norms_mean": [
+        0.01
+      ],
+      "orthogonality_errors_mean": [
+        1e-15
+      ],
+      "total_orth_error_mean": [
+        1e-15
+      ],
+      "drift_mean": [
+        0.0
+      ]
+    },
+    "evolution_scalars": {
+      "mean_comm_norm": [
+        0.01
+      ],
+      "mean_comm_target": [
+        0.02
+      ],
+      "mean_geom_error": [
+        0.0
+      ],
+      "deadband_fraction": [
+        0.0
+      ],
+      "global_step": [
+        1
+      ],
+      "lr": [
+        0.1
+      ]
+    },
+    "snapshots": []
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "time_epoch_s": 0.6,
+      "train": 50.0,
+      "val": 50.0,
+      "profile": {
+        "train_epoch_total_sec": 0.5,
+        "eval_epoch_total_sec": 0.1,
+        "epoch_total_sec": 0.6,
+        "evolution_step_sec": 0.2,
+        "evolution_retraction_sec": 0.0,
+        "retraction_steps": 0
+      }
+    }
+  ],
+  "notes": []
+}

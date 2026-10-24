@@ -1,0 +1,20 @@
+[book]
+title = "cosmos-rs"
+description = "Learning as gauge dynamics on the Grassmannian"
+authors = ["Battú"]
+language = "en"
+src = "src"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+git-repository-url = "https://github.com/ryuuft/cosmos-rs"
+edit-url-template = "https://github.com/ryuuft/cosmos-rs/edit/main/docs/book/{path}"
+default-theme = "rust"
+no-section-label = false
+
+[output.html.fold]
+enable = true
+level = 1

@@ -1,0 +1,51 @@
+# COSMOS keeps its numerics in-crate. External GPU and ML framework crates are
+# banned outright so that the published library stays a pure-Rust CPU
+# implementation whose results are byte-reproducible across the CI platforms.
+
+[graph]
+all-features = true
+targets = [
+    "x86_64-unknown-linux-gnu",
+    "x86_64-pc-windows-msvc",
+    "aarch64-apple-darwin",
+]
+
+[advisories]
+version = 2
+yanked = "deny"
+ignore = []
+
+[licenses]
+version = 2
+confidence-threshold = 0.93
+unused-allowed-license = "allow"
+allow = [
+    "Apache-2.0",
+    "MIT",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-3.0",
+    "Zlib",
+    "CDLA-Permissive-2.0",
+    "MPL-2.0",
+]
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+deny = [
+    { crate = "cudarc", reason = "no external GPU libraries; COSMOS writes its own kernels" },
+    { crate = "cust", reason = "no external GPU libraries; COSMOS writes its own kernels" },
+    { crate = "tch", reason = "no external ML framework dependency" },
+    { crate = "candle-core", reason = "no external ML framework dependency" },
+    { crate = "burn", reason = "no external ML framework dependency" },
+    { crate = "ort", reason = "no external inference runtime dependency" },
+    { crate = "wgpu", reason = "no external GPU libraries; the published crate is CPU-only" },
+]
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []

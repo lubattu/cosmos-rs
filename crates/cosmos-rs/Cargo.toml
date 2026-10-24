@@ -1,0 +1,42 @@
+[package]
+name = "cosmos-rs"
+description = "COSMOS: learning as gauge dynamics on the Grassmannian — reference implementation of the Continuous Subspace Manifold Operating System"
+readme = "../../README.md"
+keywords = ["machine-learning", "grassmannian", "riemannian", "manifold", "geometry"]
+categories = ["science", "mathematics", "algorithms"]
+publish = true
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+
+[package.metadata.docs.rs]
+all-features = false
+
+[features]
+default = []
+lapack = ["dep:ndarray-linalg", "ndarray/blas"]
+# Enables `lapack` with a system OpenBLAS backend, for environments where
+# `libopenblas` and `liblapack` are already installed.
+openblas-system = ["lapack", "ndarray-linalg/openblas-system"]
+
+[dependencies]
+ndarray = "0.17.2"
+num-traits = "0.2"
+serde = { version = "1", features = ["derive"] }
+thiserror = "2.0.18"
+
+# No BLAS/LAPACK backend feature is selected here on purpose: enabling
+# `lapack` requires the consumer to pick one (for example
+# `ndarray-linalg/openblas-system`). See docs/adr/0002-cpu-only-backends.md.
+ndarray-linalg = { version = "0.18", optional = true, default-features = false }
+
+[dev-dependencies]
+serde_json = "1"
+
+[lints]
+workspace = true

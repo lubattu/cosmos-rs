@@ -1,0 +1,29 @@
+{
+  "config": { "experiment_name": "fixture", "engine": "suite" },
+  "result": { "best_val_acc": 55.2, "best_epoch": 2 },
+  "epochs": [],
+  "history": {
+    "epoch": [1, 2],
+    "time_epoch_s": [7.5, 7.4],
+    "train_acc": [27.75, 51.35],
+    "val_acc": [39.94, 55.2],
+    "loss": [0.0764, 0.0252],
+    "mean_commutator": [0.0272, 0.00725],
+    "per_block": {
+      "connection_norms_mean": [1.0, 2.0, 3.0, 1.5, 2.5, 3.5],
+      "commutator_norms_mean": [1.0, 2.0, 3.0, 1.5, 2.5, 3.5],
+      "orthogonality_errors_mean": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      "total_orth_error_mean": [1.49e-14, 1.51e-14],
+      "drift_mean": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    "evolution_scalars": {
+      "mean_comm_norm": [0.0272, 0.00725],
+      "mean_comm_target": [0.03, 0.01],
+      "mean_geom_error": [0.0, 0.0],
+      "deadband_fraction": [0.0, 0.0],
+      "global_step": [29, 58],
+      "lr": [0.8, 0.8]
+    },
+    "snapshots": []
+  }
+}

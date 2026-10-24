@@ -1,0 +1,12 @@
+[files]
+extend-exclude = ["LICENSE", "*.lock", "data/", "runs/"]
+
+[default.extend-identifiers]
+ryuuft = "ryuuft"
+SAOR = "SAOR"
+CMR = "CMR"
+
+[default.extend-words]
+ba = "ba"
+BA = "BA"
+numer = "numer"

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the article below."
+title: "cosmos-rs"
+abstract: "Reference Rust implementation of COSMOS, a learning framework in which learning is gauge dynamics on the Grassmannian."
+type: software
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/ryuuft/cosmos-rs"
+url: "https://github.com/ryuuft/cosmos-rs"
+keywords:
+  - machine learning
+  - grassmannian
+  - riemannian optimization
+  - geometric deep learning
+  - rust
+authors:
+  - family-names: "Battú"
+    given-names: "Lucas"
+    orcid: "https://orcid.org/0009-0000-9517-713X"
+    email: "lucasdryuu@gmail.com"
+preferred-citation:
+  type: article
+  title: "COSMOS: Continuous Subspace Manifold Operating System"
+  journal: "Neural Computing and Applications"
+  year: 2026
+  status: in-press
+  authors:
+    - family-names: "Battú"
+      given-names: "Lucas"
+      orcid: "https://orcid.org/0009-0000-9517-713X"
+      email: "lucasdryuu@gmail.com"
+  notes: "Manuscript NCAA-D-26-00622R2"

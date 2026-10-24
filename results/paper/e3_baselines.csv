@@ -1,0 +1,4 @@
+dataset,model,cmr_margin,runs,param_count,test_acc_at_best_val_mean,test_acc_at_best_val_std,best_val_acc_mean,mean_train_epoch_s
+fashion-mnist,cosmos,0.628319,3,150528,76.1933,0.8441,76.8267,13.968
+fashion-mnist,mlp,0.628319,3,150265,88.3733,0.2623,89.7867,1.192
+fashion-mnist,rsgd,0.628319,3,150528,66.2533,7.7515,66.5867,12.802

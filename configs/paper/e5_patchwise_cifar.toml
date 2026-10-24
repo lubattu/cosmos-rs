@@ -1,0 +1,50 @@
+experiment = "e5_patchwise_cifar"
+dataset    = "cifar10"
+engine     = "table"
+seeds      = [319635789, 1489023746, 2874510913]
+epochs     = 60
+batch_size = 2048
+arms       = ["cosmos"]
+
+[model]
+variant               = "patchwise"
+image_shape           = [3, 32, 32]
+patch_size            = 4
+patch_subspace_dim    = 16
+agg_subspace_dim      = 256
+interior_subspace_dim = 128
+num_interior_blocks   = 3
+num_classes           = 10
+cmr_k                 = 32
+anchors_per_class     = 1
+topology              = "series"
+activation            = "leaky_relu"
+activation_placement  = "subspace"
+action                = "projection"
+
+[rules]
+lr_gauge            = 0.8
+momentum            = 0.9
+momentum_max_norm   = 1.2
+retraction_interval = 10
+exp_method          = "qr"
+update_method       = "grassmann"
+retraction_method   = "qr"
+
+[objective]
+loss       = "geodesic_hinge"
+cmr_margin = 0.6283185307179586
+
+[diagnostics]
+snapshot_every      = 10
+compute_block_every = 1
+flow_diagnostics    = false
+
+[split]
+val_size   = 5000
+split_seed = 12345
+drop_last  = true
+
+[smoke]
+epochs = 3
+seeds  = [1489023746]

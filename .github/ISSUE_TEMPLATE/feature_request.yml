@@ -1,0 +1,44 @@
+name: Feature request
+description: Propose a change to the library API or the tooling.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The scope of version 0.1.0 is strict to the published article. Proposals outside
+        that scope are recorded but not scheduled.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What cannot be done today, and who needs it.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: The API or behavior you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+  - type: checkboxes
+    id: contracts
+    attributes:
+      label: SAOR compliance
+      options:
+        - label: This proposal keeps all learnable quantities in the State, keeps the Arrangement gradient-free, keeps Objectives free of state mutation, and keeps updates global and coherent via gauge.
+          required: true
+  - type: checkboxes
+    id: dependencies
+    attributes:
+      label: Dependencies
+      options:
+        - label: This proposal adds no external GPU or ML framework dependency.
+          required: true

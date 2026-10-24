@@ -1,0 +1,24 @@
+# Build output.
+target/
+**/*.rs.bk
+
+# Personal cargo configuration (e.g. a custom target-dir).
+/.cargo/config.toml
+
+# Downloaded datasets and generated run artifacts are never committed.
+data/
+runs/
+
+# Local environment
+.env
+.env.*
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+docs/book/book/

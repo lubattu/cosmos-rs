@@ -1,0 +1,48 @@
+experiment = "e1"
+dataset    = "fashion-mnist"
+engine     = "suite"
+seeds      = [319635789, 1489023746, 2874510913,
+              1560498371, 4021755392, 733196085]
+epochs     = 40
+batch_size = 2048
+
+[model]
+variant               = "flat"
+input_subspace_dim    = 32
+interior_subspace_dim = 16
+num_interior_blocks   = 5
+num_classes           = 10
+cmr_k                 = 8
+anchors_per_class     = 1
+topology              = "series"
+activation            = "none"
+activation_placement  = "none"
+action                = "projection"
+
+[rules]
+lr_gauge            = 0.8
+momentum            = 0.9
+momentum_max_norm   = 1.2
+retraction_interval = 10
+exp_method          = "qr"
+update_method       = "grassmann"
+retraction_method   = "qr"
+
+[objective]
+loss       = "geodesic_hinge"
+cmr_margin = 0.6283185307179586
+
+[diagnostics]
+snapshot_every      = 10
+compute_block_every = 1
+flow_diagnostics    = false
+
+[sweep]
+retraction_interval = [0, 5, 10, 30, 80, 100]
+
+[smoke]
+epochs = 3
+seeds  = [319635789]
+
+[smoke.sweep]
+retraction_interval = [10]

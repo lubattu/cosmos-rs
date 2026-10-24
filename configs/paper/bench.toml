@@ -1,0 +1,12 @@
+sizes       = [256, 512, 784, 1024, 2048, 3072, 4096]
+quick_sizes = [256, 512, 784, 1024]
+target_norm = 1.2
+block_k     = 32
+methods     = ["pade", "taylor", "cayley", "qr"]
+
+[drift]
+ambient_dim = 64
+subspace_dim = 8
+blocks = 4
+steps = 200
+step_size = 0.02

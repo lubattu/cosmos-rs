@@ -1,0 +1,67 @@
+name: Bug report
+description: Report incorrect behavior in the library or the reproduction driver.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search the existing issues first. Security problems go to SECURITY.md, not here.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happens, in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: The smallest command or code that shows the problem.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Include the full error or the numeric output.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: cosmos-rs version or commit
+    validations:
+      required: true
+  - type: input
+    id: toolchain
+    attributes:
+      label: Rust toolchain
+      description: Output of `rustc --version`.
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - Windows
+        - macOS
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+    validations:
+      required: false

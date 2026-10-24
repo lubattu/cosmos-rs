@@ -1,0 +1,135 @@
+# Expectations for shortened runs.
+#
+# Every value below was produced by this crate's own shortened runs and is
+# recorded here as a regression reference: a later run that drifts away from
+# it has changed behaviour. A shortened run executes the same objective,
+# loss, model and rule as the full run; only the epoch count and the seed
+# list are reduced. A value outside tolerance is a defect to investigate,
+# never a reason to retune.
+#
+# An accuracy is compared to 1.5 points absolute, which absorbs the
+# last-digit differences between numerical backends without hiding a change
+# of behaviour. Every other scalar is compared to 5 % of its reference once
+# its magnitude reaches near_zero_reference. Below that magnitude the
+# treatment depends on whether the quantity can change sign: a signed
+# quantity uses the absolute floor near_zero_absolute, because a relative
+# band around a value near zero is narrower than the arithmetic itself,
+# while a strictly positive quantity keeps a relative band, widened to
+# positive_small_relative.
+#
+# A cell whose file carries more than one arm names its arm in the entry
+# name, as "<cell>:<arm>", so the entry is matched to that arm alone.
+
+[tolerance]
+accuracy_points           = 1.5
+orthogonality_upper_bound = 1e-12
+relative                  = 0.05
+near_zero_reference       = 0.05
+near_zero_absolute        = 0.005
+positive_small_relative   = 0.20
+
+[[cell]]
+name    = "e1"
+config  = "configs/paper/e1.toml"
+engine  = "suite"
+seed    = 319635789
+epochs  = 3
+val_acc             = [38.56, 55.11, 56.83]
+train_acc           = [28.0517, 51.2950, 56.4517]
+loss                = [0.0763887, 0.0251349, 0.0223307]
+mean_commutator     = [0.0271572, 0.00745191, 0.00570390]
+total_orth_error_max = 1.0e-12
+
+[[cell]]
+name    = "e2"
+config  = "configs/paper/e2.toml"
+engine  = "suite"
+seed    = 319635789
+epochs  = 3
+val_acc              = [47.66, 54.80, 65.06]
+train_acc            = [29.2633, 51.9733, 59.4733]
+mean_commutator      = [0.0295242, 0.0109326, 0.0198814]
+total_orth_error_max = 1.0e-12
+
+[[cell]]
+name    = "e3_baselines:cosmos"
+config  = "configs/paper/e3_baselines.toml"
+engine  = "table"
+arm     = "cosmos"
+seed    = 319635789
+epochs  = 3
+train_acc   = [28.7767, 44.6834, 55.0105]
+val_acc     = [36.90, 54.10, 57.78]
+test_acc    = [36.46, 53.21, 56.24]
+param_count = 150528
+
+[[cell]]
+name    = "e3_baselines:mlp"
+config  = "configs/paper/e3_baselines.toml"
+engine  = "table"
+arm     = "mlp"
+seed    = 319635789
+epochs  = 3
+train_acc   = [70.9998, 82.4557, 84.4407]
+val_acc     = [79.94, 83.08, 85.12]
+param_count = 150265
+
+[[cell]]
+name    = "e3_baselines:rsgd"
+config  = "configs/paper/e3_baselines.toml"
+engine  = "table"
+arm     = "rsgd"
+seed    = 319635789
+epochs  = 3
+train_acc   = [24.2957, 27.3456, 29.5617]
+val_acc     = [32.34, 16.72, 30.42]
+param_count = 150528
+
+[[cell]]
+name    = "e4_topology"
+config  = "configs/paper/e4_topology.toml"
+engine  = "suite"
+seed    = 319635789
+epochs  = 3
+val_acc              = [10.01, 10.00, 9.17]
+flow_ratio_overall   = [0.0103616, 0.0448845, 0.0137114]
+cmr_margin           = [-0.00850533, -0.0103952, -0.00975018]
+total_orth_error_max = 1.0e-12
+
+[[cell]]
+name    = "e5_patchwise_cifar:cosmos"
+config  = "configs/paper/e5_patchwise_cifar.toml"
+engine  = "table"
+arm     = "cosmos"
+seed    = 1489023746
+epochs  = 3
+train_acc   = [21.1542, 29.9084, 34.0332]
+val_acc     = [27.62, 31.70, 35.48]
+test_acc    = [27.74, 32.04, 36.18]
+param_count = 443136
+
+[[cell]]
+name    = "e5_cifar_flat:cosmos"
+config  = "configs/paper/e5_cifar_flat.toml"
+engine  = "table"
+arm     = "cosmos"
+seed    = 1489023746
+epochs  = 3
+val_acc_upper_bound = 15.0
+param_count         = 589824
+
+# The benchmark has no per-epoch history: it is held to structural
+# expectations instead.
+[bench]
+name   = "bench"
+config = "configs/paper/bench.toml"
+engine = "bench"
+orthogonality_upper_bound = 1.0e-11
+require_slopes            = true
+require_block_qr_monotone = true
+# Two adjacent sizes are compared only when the larger is at least this
+# many times the smaller, and a fall of up to monotone_tolerance is
+# accepted: a wall-clock median over close sizes spreads further than the
+# cost difference it is meant to show.
+monotone_min_size_ratio   = 2.0
+monotone_tolerance        = 0.10

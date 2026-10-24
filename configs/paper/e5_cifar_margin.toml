@@ -1,0 +1,55 @@
+experiment = "e5_cifar_margin"
+dataset    = "cifar10"
+engine     = "table"
+seeds      = [319635789]
+epochs     = 30
+batch_size = 2048
+arms       = ["cosmos"]
+
+[model]
+variant               = "flat"
+input_subspace_dim    = 32
+interior_subspace_dim = 16
+num_interior_blocks   = 5
+num_classes           = 10
+cmr_k                 = 8
+anchors_per_class     = 1
+topology              = "series"
+activation            = "none"
+activation_placement  = "none"
+action                = "projection"
+
+[rules]
+lr_gauge            = 0.8
+momentum            = 0.9
+momentum_max_norm   = 1.2
+retraction_interval = 10
+exp_method          = "qr"
+update_method       = "grassmann"
+retraction_method   = "qr"
+
+[objective]
+loss       = "geodesic_hinge"
+cmr_margin = 0.6283185307179586
+
+[diagnostics]
+snapshot_every      = 10
+compute_block_every = 1
+flow_diagnostics    = false
+
+[split]
+val_size   = 5000
+split_seed = 12345
+drop_last  = true
+
+[sweep]
+cmr_margin = [0.3141592653589793,
+              0.15707963267948966,
+              0.07853981633974483]
+
+[smoke]
+epochs = 3
+seeds  = [319635789]
+
+[smoke.sweep]
+cmr_margin = [0.3141592653589793]

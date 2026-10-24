@@ -1,0 +1,54 @@
+name: Experiment proposal
+description: Propose a new experiment before opening a pull request with its artifacts.
+title: "experiment: "
+labels: ["experiment"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Contributed experiments arrive as a proposal first. Once this issue is accepted,
+        open a pull request containing the config TOML, the run artifacts and the result
+        CSV. Read [CONTRIBUTING.md#saor-contracts](https://github.com/ryuuft/cosmos-rs/blob/main/CONTRIBUTING.md#saor-contracts) before filling this in.
+  - type: checkboxes
+    id: saor
+    attributes:
+      label: Governance
+      options:
+        - label: This proposal complies with SAOR contracts 1-4
+          required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: The claim this experiment would establish or refute, stated so that either outcome is informative.
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration
+      description: The proposed config TOML, or the fields that differ from the paper default.
+      render: toml
+    validations:
+      required: true
+  - type: textarea
+    id: screening
+    attributes:
+      label: Tier-1 screening evidence
+      description: The screening runs already performed, with seeds, epochs and the observed numbers. Screening results are candidates, not claims.
+    validations:
+      required: true
+  - type: textarea
+    id: certification
+    attributes:
+      label: Certification plan
+      description: How the finalist cells will be certified on CPU in f64 with the seeds 319635789, 1489023746 and 2874510913, and which run JSONs will be attached.
+    validations:
+      required: true
+  - type: input
+    id: cost
+    attributes:
+      label: Estimated cost
+      description: Number of runs and wall-clock time.
+    validations:
+      required: true
