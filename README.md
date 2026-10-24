@@ -20,7 +20,8 @@ Arrangement routes signals, Objectives evaluate configurations without mutating 
 Rules move the State by global, coherent gauge updates that preserve orthonormality by
 construction. `cosmos-rs` is the reference Rust implementation of the framework and of
 every experiment reported in the
-[accompanying article](https://doi.org/10.1007/s00521-026-12581-3).
+[accompanying article](https://doi.org/10.1007/s00521-026-12581-3)
+([read online](https://rdcu.be/CRLd5jpt5VCa), free view-only full text).
 
 <p align="center">
   <img src="assets/saor.svg" alt="SAOR: State, Arrangement, Objectives, Rules" width="760">
