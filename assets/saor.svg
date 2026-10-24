@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="190" viewBox="0 0 760 190" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#768390"/>
+    </marker>
+  </defs>
+
+  <!-- State -->
+  <rect x="20" y="45" width="160" height="70" rx="10" fill="#768390" fill-opacity="0.12" stroke="#768390" stroke-width="1.5"/>
+  <text x="100" y="75" text-anchor="middle" fill="#768390" font-size="16" font-weight="600">State</text>
+  <text x="100" y="97" text-anchor="middle" fill="#768390" font-size="12">orthonormal bases W&#7522;</text>
+
+  <!-- Arrangement -->
+  <rect x="210" y="45" width="160" height="70" rx="10" fill="#768390" fill-opacity="0.12" stroke="#768390" stroke-width="1.5"/>
+  <text x="290" y="75" text-anchor="middle" fill="#768390" font-size="16" font-weight="600">Arrangement</text>
+  <text x="290" y="97" text-anchor="middle" fill="#768390" font-size="12">parameter-free routing</text>
+
+  <!-- Objectives -->
+  <rect x="400" y="45" width="160" height="70" rx="10" fill="#768390" fill-opacity="0.12" stroke="#768390" stroke-width="1.5"/>
+  <text x="480" y="75" text-anchor="middle" fill="#768390" font-size="16" font-weight="600">Objectives</text>
+  <text x="480" y="97" text-anchor="middle" fill="#768390" font-size="12">evaluate, never mutate</text>
+
+  <!-- Rules -->
+  <rect x="590" y="45" width="150" height="70" rx="10" fill="#768390" fill-opacity="0.12" stroke="#768390" stroke-width="1.5"/>
+  <text x="665" y="75" text-anchor="middle" fill="#768390" font-size="16" font-weight="600">Rules</text>
+  <text x="665" y="97" text-anchor="middle" fill="#768390" font-size="12">gauge dynamics</text>
+
+  <!-- forward arrows -->
+  <line x1="180" y1="80" x2="208" y2="80" stroke="#768390" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="370" y1="80" x2="398" y2="80" stroke="#768390" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="560" y1="80" x2="588" y2="80" stroke="#768390" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- feedback arrow: Rules back to State -->
+  <path d="M 665 115 L 665 155 L 100 155 L 100 117" fill="none" stroke="#768390" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="382" y="148" text-anchor="middle" fill="#768390" font-size="12">global gauge update — orthonormality preserved by construction</text>
+</svg>

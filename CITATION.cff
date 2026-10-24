@@ -23,10 +23,9 @@ preferred-citation:
   title: "COSMOS: Continuous Subspace Manifold Operating System"
   journal: "Neural Computing and Applications"
   year: 2026
-  status: in-press
+  doi: "10.1007/s00521-026-12581-3"
   authors:
     - family-names: "Battú"
       given-names: "Lucas"
       orcid: "https://orcid.org/0009-0000-9517-713X"
       email: "lucasdryuu@gmail.com"
-  notes: "Manuscript NCAA-D-26-00622R2"
