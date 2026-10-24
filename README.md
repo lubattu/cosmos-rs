@@ -11,7 +11,7 @@
 [![CI](https://github.com/ryuuft/cosmos-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/ryuuft/cosmos-rs/actions/workflows/ci.yml)
 [![MSRV](https://img.shields.io/badge/rustc-1.85%2B-orange.svg)](https://github.com/ryuuft/cosmos-rs)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23619063.svg)](https://doi.org/10.5281/zenodo.23619063)
+[![DOI](https://zenodo.org/badge/1432182674.svg)](https://doi.org/10.5281/zenodo.23619062)
 
 **COSMOS — Continuous Subspace Manifold Operating System** is a learning framework in
 which every learnable quantity is an orthonormal subspace basis and learning is gauge

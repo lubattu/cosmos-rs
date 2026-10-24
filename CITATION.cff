@@ -7,8 +7,11 @@ version: "0.1.0"
 license: Apache-2.0
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.23619062"
+    description: "Zenodo archive of cosmos-rs (all versions; resolves to the latest)"
+  - type: doi
     value: "10.5281/zenodo.23619063"
-    description: "Zenodo archive of cosmos-rs"
+    description: "Zenodo archive of cosmos-rs v0.1.0"
 repository-code: "https://github.com/ryuuft/cosmos-rs"
 url: "https://github.com/ryuuft/cosmos-rs"
 keywords:
