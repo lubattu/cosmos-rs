@@ -8,8 +8,8 @@ edition = "2024"
 rust-version = "1.85"
 license = "Apache-2.0"
 authors = ["Battú <lucasdryuu@gmail.com>"]
-repository = "https://github.com/ryuuft/cosmos-rs"
-homepage = "https://github.com/ryuuft/cosmos-rs"
+repository = "https://github.com/lubattu/cosmos-rs"
+homepage = "https://github.com/lubattu/cosmos-rs"
 documentation = "https://docs.rs/cosmos-rs"
 
 [workspace.lints.rust]

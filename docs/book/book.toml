@@ -10,8 +10,8 @@ build-dir = "book"
 create-missing = false
 
 [output.html]
-git-repository-url = "https://github.com/ryuuft/cosmos-rs"
-edit-url-template = "https://github.com/ryuuft/cosmos-rs/edit/main/docs/book/{path}"
+git-repository-url = "https://github.com/lubattu/cosmos-rs"
+edit-url-template = "https://github.com/lubattu/cosmos-rs/edit/main/docs/book/{path}"
 default-theme = "rust"
 no-section-label = false
 

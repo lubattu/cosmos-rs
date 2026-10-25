@@ -8,7 +8,7 @@ body:
       value: |
         Contributed experiments arrive as a proposal first. Once this issue is accepted,
         open a pull request containing the config TOML, the run artifacts and the result
-        CSV. Read [CONTRIBUTING.md#saor-contracts](https://github.com/ryuuft/cosmos-rs/blob/main/CONTRIBUTING.md#saor-contracts) before filling this in.
+        CSV. Read [CONTRIBUTING.md#saor-contracts](https://github.com/lubattu/cosmos-rs/blob/main/CONTRIBUTING.md#saor-contracts) before filling this in.
   - type: checkboxes
     id: saor
     attributes:

@@ -62,5 +62,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   own data, reproducing the article and the contribution rules, built in
   continuous integration.
 
-[Unreleased]: https://github.com/ryuuft/cosmos-rs/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/ryuuft/cosmos-rs/releases/tag/v0.1.0
+[Unreleased]: https://github.com/lubattu/cosmos-rs/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/lubattu/cosmos-rs/releases/tag/v0.1.0

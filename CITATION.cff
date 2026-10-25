@@ -12,8 +12,8 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.23619063"
     description: "Zenodo archive of cosmos-rs v0.1.0"
-repository-code: "https://github.com/ryuuft/cosmos-rs"
-url: "https://github.com/ryuuft/cosmos-rs"
+repository-code: "https://github.com/lubattu/cosmos-rs"
+url: "https://github.com/lubattu/cosmos-rs"
 keywords:
   - machine learning
   - grassmannian

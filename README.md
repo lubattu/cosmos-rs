@@ -8,8 +8,8 @@
 
 [![crates.io](https://img.shields.io/crates/v/cosmos-rs.svg)](https://crates.io/crates/cosmos-rs)
 [![docs.rs](https://docs.rs/cosmos-rs/badge.svg)](https://docs.rs/cosmos-rs)
-[![CI](https://github.com/ryuuft/cosmos-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/ryuuft/cosmos-rs/actions/workflows/ci.yml)
-[![MSRV](https://img.shields.io/badge/rustc-1.85%2B-orange.svg)](https://github.com/ryuuft/cosmos-rs)
+[![CI](https://github.com/lubattu/cosmos-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/lubattu/cosmos-rs/actions/workflows/ci.yml)
+[![MSRV](https://img.shields.io/badge/rustc-1.85%2B-orange.svg)](https://github.com/lubattu/cosmos-rs)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/1432182674.svg)](https://doi.org/10.5281/zenodo.23619062)
 
@@ -146,7 +146,7 @@ cargo run --release --example custom_data
 
 ## Documentation
 
-- **[The guide](https://ryuuft.github.io/cosmos-rs/)** — concepts, a getting-started
+- **[The guide](https://lubattu.github.io/cosmos-rs/)** — concepts, a getting-started
   walkthrough, how to bring your own data, how to reproduce the article, and the
   contribution rules. It lives under [`docs/book`](docs/book); build it locally with
   `mdbook build docs/book`.
@@ -200,7 +200,7 @@ rules: contributions that violate them are closed without further negotiation. S
 [RELEASING.md](RELEASING.md) for how a version of this workspace is released.
 
 Questions and ideas are welcome in the
-[issue tracker](https://github.com/ryuuft/cosmos-rs/issues). To report a security
+[issue tracker](https://github.com/lubattu/cosmos-rs/issues). To report a security
 problem, follow [SECURITY.md](SECURITY.md) instead of opening a public issue.
 
 ## License

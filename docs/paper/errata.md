@@ -20,7 +20,7 @@ library's QR routine. The library's own `CosmosState::seed_orthonormal` is a
 convenience initializer with a different generator and a different
 distribution; it is never used by the reproduction driver. Offering the
 keyed Gaussian draw as a second library constructor is tracked as a separate
-request: <https://github.com/ryuuft/cosmos-rs/issues/2>.
+request: <https://github.com/lubattu/cosmos-rs/issues/2>.
 
 ## Linear algebra backend
 
