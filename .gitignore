@@ -2,12 +2,11 @@
 target/
 **/*.rs.bk
 
-# Personal cargo configuration (e.g. a custom target-dir).
-/.cargo/config.toml
-
-# Downloaded datasets and generated run artifacts are never committed.
+# Downloaded datasets, generated run artifacts and rendered figures are
+# never committed; figures are attached to the corresponding release.
 data/
 runs/
+results/paper/figures/
 
 # Local environment
 .env
