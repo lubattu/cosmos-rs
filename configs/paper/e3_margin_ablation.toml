@@ -29,19 +29,19 @@ retraction_method   = "qr"
 
 [objective]
 loss       = "geodesic_hinge"
-cmr_margin = 0.6283185307179586
+cmr_margin = 0.6283185307
 
 [diagnostics]
 snapshot_every      = 10
 compute_block_every = 1
-flow_diagnostics    = false
+flow_diagnostics    = true
 
 [sweep]
 retraction_interval = [10]
-cmr_margin = [0.3141592653589793,
-              0.6283185307179586,
-              0.15707963267948966,
-              0.07853981633974483]
+cmr_margin = [0.3141592654,
+              0.6283185307,
+              0.1570796327,
+              0.0785398163]
 
 [smoke]
 epochs = 3
@@ -49,4 +49,4 @@ seeds  = [319635789]
 
 [smoke.sweep]
 retraction_interval = [10]
-cmr_margin          = [0.6283185307179586]
+cmr_margin          = [0.6283185307]
