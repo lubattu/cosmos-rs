@@ -141,11 +141,27 @@ The colour-dataset margin sweep was run at a single seed. Its configuration
 says so (`seeds = [319635789]`), and any number derived from it carries no
 spread.
 
-## Figures scheduled for a later release
+## Margin figures
 
-The margin-evolution and inter-class-angle figures are generated in a later
-release. The per-epoch fields they read are already recorded, so no
-experiment needs re-running. See `docs/paper/errata.md`.
+The margin-evolution and inter-class-angle figures are produced from the
+margin-ablation artifacts with
+
+```
+python scripts/paper/figures/e3_figures.py --runs runs/e3_margin_ablation --out results/paper/figures
+```
+
+They require artifacts recorded with `[diagnostics] flow_diagnostics`
+enabled, which `configs/paper/e3_margin_ablation.toml` does since 0.1.1;
+artifacts from earlier runs of that cell do not carry the angle fields.
+Rendered figures are never committed; like the run artifacts, they are
+attached to the corresponding release. `results/paper/e3_margin_ablation.csv`
+is the committed table of the 0.1.1 re-run (2026-10-27), produced with the
+`lapack` feature linked against a sequential Intel MKL and the `gesvd`
+driver — the article's own backend. That re-run reproduces the article's
+twelve run artifacts bit-identically. The cell's configuration carries the
+rounded margin literals the article was launched with, and the default
+pure-Rust backend deviates on the two small-margin arms; both points are
+recorded in `docs/paper/errata.md`.
 
 ## Checking an artifact
 

@@ -197,7 +197,7 @@ checksum = "a6ef517f0926dd24a1582492c791b6a4818a4d94e789a334894aa15b0d12f55c"
 
 [[package]]
 name = "cosmos-paper"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap",
  "cosmos-rs",
@@ -214,7 +214,7 @@ dependencies = [
 
 [[package]]
 name = "cosmos-rs"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "ndarray",
  "ndarray-linalg",
@@ -1145,7 +1145,7 @@ dependencies = [
 
 [[package]]
 name = "xtask"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "zerocopy"

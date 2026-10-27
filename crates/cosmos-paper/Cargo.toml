@@ -10,7 +10,7 @@ authors.workspace = true
 repository.workspace = true
 
 [dependencies]
-cosmos-rs = { path = "../cosmos-rs", version = "0.1.0" }
+cosmos-rs = { path = "../cosmos-rs", version = "0.1.1" }
 clap = { version = "4", features = ["derive"] }
 flate2 = "1"
 ndarray = "0.17.2"

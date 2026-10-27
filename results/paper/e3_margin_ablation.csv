@@ -1,0 +1,5 @@
+experiment,retraction_interval,num_interior_blocks,topology,interior_subspace_dim,cmr_margin,lr_gauge,momentum,momentum_max_norm,runs,best_val_acc_mean,best_val_acc_std,final_orth_error_mean,final_commutator_mean
+e3_margin_ablation,10,5,series,16,0.078540,0.800000,0.900000,1.200000,3,68.7467,4.6140,1.474e-14,0.000450
+e3_margin_ablation,10,5,series,16,0.157080,0.800000,0.900000,1.200000,3,74.0033,1.8217,1.465e-14,0.001150
+e3_margin_ablation,10,5,series,16,0.314159,0.800000,0.900000,1.200000,3,79.2500,0.6007,1.450e-14,0.002808
+e3_margin_ablation,10,5,series,16,0.628319,0.800000,0.900000,1.200000,3,77.6033,2.0712,1.434e-14,0.007938

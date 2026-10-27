@@ -3,7 +3,7 @@ message: "If you use this software, please cite both the software and the articl
 title: "cosmos-rs"
 abstract: "Reference Rust implementation of COSMOS, a learning framework in which learning is gauge dynamics on the Grassmannian."
 type: software
-version: "0.1.0"
+version: "0.1.1"
 license: Apache-2.0
 identifiers:
   - type: doi

@@ -7,6 +7,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-27
+
+### Added
+
+- `scripts/paper/figures/e3_figures.py`, which produces the two deferred
+  figures of the classification-margin experiment: the margin evolution and
+  the inter-class angle matrix. Rendered figures are not committed; the
+  reproduced `results/paper/e3_margin_ablation.csv` is, and comes from a
+  `lapack` (sequential MKL, `gesvd`) re-run that matches the article's
+  twelve run artifacts bit for bit.
+
+### Changed
+
+- `configs/paper/e3_margin_ablation.toml` enables `flow_diagnostics`, so the
+  cell's artifacts record the per-epoch angle fields and the final
+  inter-class angle matrix the figures read. The diagnostics do not alter
+  the training trajectory; accuracy histories are bit-identical either way.
+- `configs/paper/e3_margin_ablation.toml` carries the rounded ten-digit
+  margin literals the article's runs were launched with instead of
+  full-precision fractions of π. At the two smaller margins the trajectory
+  is metastable and last-digit changes to the margin move the epoch at
+  which a run escapes the chance plateau.
+
+### Fixed
+
+- `.cargo/config.toml` is now committed, so the `cargo run-checks` alias
+  that `CONTRIBUTING.md` and `RELEASING.md` rely on exists on a fresh
+  clone, and it now passes `checks` to the runner instead of `run-checks`,
+  which the runner rejects. Continuous integration invokes the runner
+  directly and was unaffected.
+- Corrections to `docs/paper/errata.md`: the initialization note names the
+  shipped keyed Gaussian constructor
+  (`CosmosState::seed_orthonormal_gaussian`), and the margin-ablation note
+  records the cell's margin literals and backend sensitivity.
+
 ## [0.1.0] - 2026-10-24
 
 ### Added
@@ -62,5 +97,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   own data, reproducing the article and the contribution rules, built in
   continuous integration.
 
-[Unreleased]: https://github.com/lubattu/cosmos-rs/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/lubattu/cosmos-rs/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/lubattu/cosmos-rs/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/lubattu/cosmos-rs/releases/tag/v0.1.0

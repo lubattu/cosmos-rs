@@ -1,0 +1,2 @@
+[alias]
+run-checks = "run -p xtask --release -- checks"
